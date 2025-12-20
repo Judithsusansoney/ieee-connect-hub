@@ -1,13 +1,20 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import { MobileLayout } from '@/components/layout/MobileLayout';
+import { HeroHeader } from '@/components/home/HeroHeader';
+import { QuickActions } from '@/components/home/QuickActions';
+import { FeaturedEvents } from '@/components/home/FeaturedEvents';
+import { LatestNews } from '@/components/home/LatestNews';
+import { CommunitiesPreview } from '@/components/home/CommunitiesPreview';
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <MobileLayout>
+      <HeroHeader />
+      <QuickActions />
+      <FeaturedEvents />
+      <LatestNews />
+      <CommunitiesPreview />
+    </MobileLayout>
   );
 };
 
